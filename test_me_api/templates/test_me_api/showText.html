@@ -1,0 +1,8 @@
+<p>SHOW TEXT PAGE</p>
+<form method="post">
+    {% csrf_token %}
+    pk : text
+    {% for text_entry in all_text_entries %}
+        <p>{{ text_entry.pk }} : {{ text_entry.body }}</p>
+    {% endfor %}
+</form>
